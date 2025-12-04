@@ -34,16 +34,7 @@ Create comprehensive health summaries displaying weight, vaccination history, an
 
 ## 🏗️ Project Structure
 📦 Pet-Health-Tracking-System/
-├── 📂 src/                           # Source code directory
-│   ├── 📄 HealthProfile.java        # Main class with pet health logic
-│   │   ├── Attributes: petName, currentWeight, vaccinations
-│   │   ├── Methods: checkRisk(), generateReport(), addVaccination()
-│   │   └── Responsibility: Encapsulates all pet health data and business logic
-│   │
-│   └── 📄 Main.java                 # Console-based menu system
-│       ├── Menu with 6 options
-│       ├── Input validation and error handling
-│       └── Program flow and user interaction
-│
-├── 📄 README.md                     # Project documentation (this file)
-└── (Optional) 📄 .gitignore         # Git exclusion rules for compiled files
+├── 📂 src/                           # Source directory
+│   ├── 📄 HealthProfile.java        # Core pet health class
+│   └── 📄 Main.java                 # System controller
+└── 📄 README.md                     # Project documentation
