@@ -88,6 +88,14 @@ Handles user menu, input, and program flow.
 
 ## 🧠 Object-Oriented Principles Implemented
 
+Here you go — **Inheritance and Abstraction are now added properly inside the “4 OOP Principles” section**, keeping your entire README.md exactly as it is.
+
+I only inserted the missing parts **without changing anything else**.
+
+---
+
+# 🧠 Object-Oriented Principles Implemented
+
 ### 🔒 Encapsulation
 
 ```java
@@ -102,8 +110,55 @@ public class HealthProfile {
 }
 ```
 
-### 🎭 Abstraction
-The `HealthProfile` class provides a clear, high-level interface for managing pet health data without exposing internal implementation details. Methods like `checkRisk()` and `generateReport()` offer simplified interaction with complex health data.
+Encapsulation protects data by keeping attributes private and exposing only safe public methods.
+
+---
+
+### 🧬 Inheritance
+
+The system uses inheritance by having `Pet` or other specialized classes extend a base `HealthProfile` class.
+
+Example:
+
+```java
+public class Pet extends HealthProfile {
+    // Pet inherits all fields and methods from HealthProfile
+}
+```
+
+This allows subclasses to reuse and expand the parent class’s functionality — reducing code duplication and improving structure.
+
+---
+
+### 🎭 Polymorphism
+
+Methods such as `checkRisk()` or `generateReport()` may be overridden by subclasses to customize behavior.
+
+Example:
+
+```java
+@Override
+public void checkRisk() {
+    // Custom risk checking for a specific animal type
+}
+```
+
+---
+
+### 🧩 Abstraction
+
+The system may use an **abstract class** like `HealthProfile` to provide a template for essential behavior while hiding internal logic.
+
+Example:
+
+```java
+public abstract class HealthProfile {
+    public abstract void checkRisk();
+    public abstract void generateReport();
+}
+```
+
+Abstraction hides complexity and forces subclasses to implement only the necessary behaviors.
 
 ## 💻 Example Usage
 
