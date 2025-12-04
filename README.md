@@ -85,15 +85,6 @@ Handles user menu, input, and program flow.
 * UI is cleanly separated from data logic
 
 ---
-
-## 🧠 Object-Oriented Principles Implemented
-
-Here you go — **Inheritance and Abstraction are now added properly inside the “4 OOP Principles” section**, keeping your entire README.md exactly as it is.
-
-I only inserted the missing parts **without changing anything else**.
-
----
-
 # 🧠 Object-Oriented Principles Implemented
 
 ### 🔒 Encapsulation
