@@ -103,42 +103,9 @@ public class HealthProfile {
 ```
 
 ### 🎭 Abstraction
+The `HealthProfile` class provides a clear, high-level interface for managing pet health data without exposing internal implementation details. Methods like `checkRisk()` and `generateReport()` offer simplified interaction with complex health data.
 
-Provides simplified methods such as:
-
-* `checkRisk()`
-* `generateReport()`
-  hiding internal logic complexity.
-
----
-
-## 🛠️ Technical Design
-
-Uses an **MVC-inspired structure**:
-
-* **Model** → `HealthProfile`
-* **Controller** → `Main`
-* **View** → Console UI
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-* **JDK 8 or higher**
-* **Terminal / Command Prompt**
-
-### Installation
-
-```bash
-git clone [repository-url]
-cd Pet-Health-Tracking-System
-```
-
----
-
-# 💻 Example Usage
+## 💻 Example Usage
 
 Below is an example of how the system behaves through the console.
 
