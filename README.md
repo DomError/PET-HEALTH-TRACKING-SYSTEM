@@ -3,155 +3,254 @@
 > An Object-Oriented Java application for monitoring pet health metrics
 
 ## 👥 Team Members
-- **Earl John Lingon**
-- **Jim Ruzzel Marasigan**
-- **Amiel Harold**
+
+* **Earl John Lingon**
+* **Jim Ruzzel Marasigan**
+* **Amiel Harold Manalo**
 
 **Course:** IT 2112
 
+---
+
 ## 📝 Overview
 
-The Pet Health Tracking System is a Java-based software project that implements Object-Oriented Programming principles to help pet owners and veterinarians monitor pets' overall health. The system maintains comprehensive health records including vaccinations, weight changes, allergies, medications, and general health risks.
+The **Pet Health Tracking System** is a Java-based application designed to help pet owners and veterinarians monitor essential pet health data.
+It uses Object-Oriented Programming to maintain:
 
-This project addresses a practical need for pet owners—especially those with pets having sensitive health conditions—by providing an organized way to track and analyze pet health data.
+* Weight history
+* Vaccination records
+* Allergies and medications
+* Health risk assessments
+
+The system is especially useful for pets with chronic or sensitive health issues.
+
+---
 
 ## ✨ Features
 
-### ➕ **Add Pet Health Profile**
-Create new pet records with essential details including name, weight, and vaccination history.
+### ➕ Add Pet Health Profile
 
-### ⚖️ **Update Weight**
-Modify and track changes in a pet's weight over time with complete change history.
+Store essential pet information including name, weight, and vaccinations.
 
-### 💉 **Add Vaccination**
-Record new vaccinations with dates and types for accurate health monitoring.
+### ⚖️ Update Weight
 
-### ⚠️ **Check Health Risks**
-Automatically detect health concerns including underweight/overweight conditions and missing vaccinations.
+Track changes in pet weight over time.
 
-### 📄 **Generate Health Report**
-Create comprehensive health summaries displaying weight, vaccination history, and risk alerts.
+### 💉 Add Vaccination
 
-# Pet Health Monitoring System 🐾
+Record new vaccinations with date and type.
 
-A Java-based application for tracking and managing pet health information including weight monitoring, vaccination records, and health risk assessment.
+### ⚠️ Check Health Risks
+
+Analyze potential health concerns such as weight issues or missing shots.
+
+### 📄 Generate Health Report
+
+Produce a detailed summary of pet health records.
+
+---
+
+# 🐾 Pet Health Monitoring System
+
+A Java-based OOP project for reliable pet health tracking.
+
+---
 
 ## 🏗️ Project Structure
 
-### **1. HealthProfile (Main Class)**
-The core data model that manages all pet health information and business logic.
+### **1. HealthProfile (Model Class)**
 
-**Responsibilities:**
-- Holds pet attributes: `petName`, `currentWeight`, `vaccinations`
-- Provides health assessment and reporting methods
-- Manages data validation and business rules
-
-**Key Methods:**
-- `checkRisk()` - Assesses health risks based on weight and vaccination status
-- `generateReport()` - Creates comprehensive health reports
-- `addVaccination()` - Updates vaccination records
-- `setCurrentWeight()` - Updates weight with validation
+Stores pet data and performs health-related logic.
 
 ### **2. Main (Controller Class)**
-The user interface controller that manages all user interactions.
 
-**Features:**
-- 6-option menu system for complete program control
-- Comprehensive input validation and error handling
-- Clean user interface with formatted output
-- Program flow management and HealthProfile method coordination
+Handles user menu, input, and program flow.
+
+---
 
 ## 🧩 System Components
 
-| Component | Class | Responsibility |
-|-----------|-------|----------------|
-| **Data Layer** | `HealthProfile.java` | Stores and processes pet health information |
-| **Interface Layer** | `Main.java` | Handles user input and displays output |
-| **Validation** | Both Classes | Ensures data integrity through input validation |
+| Component           | Class                | Role                               |
+| ------------------- | -------------------- | ---------------------------------- |
+| **Data Layer**      | `HealthProfile.java` | Stores & processes pet health data |
+| **Interface Layer** | `Main.java`          | Manages user input/output          |
+| **Validation**      | Both                 | Ensures data integrity             |
+
+---
 
 ## 🔗 Class Relationship
 
-- **Main class** creates and uses HealthProfile objects
-- **HealthProfile class** contains all pet health logic
-- Clear separation of concerns between data management and user interface
+* `Main` **creates and controls** `HealthProfile` objects
+* `HealthProfile` **contains all logic**
+* UI is cleanly separated from data logic
 
-## 🎯 Key Features
-
-- **Weight Monitoring**: Track and validate pet weight changes
-- **Vaccination Management**: Maintain up-to-date vaccination records
-- **Health Risk Assessment**: Automated health risk evaluation
-- **Comprehensive Reporting**: Detailed health status reports
-- **Robust Validation**: Input validation for data integrity
-
-## 📋 Usage
-
-1. Create a new `HealthProfile` for your pet
-2. Use the interactive menu system to:
-   - Update weight information
-   - Add vaccination records
-   - Check health risks
-   - Generate health reports
-   - View all stored information
-
-## 🛠️ Technical Design
-
-The system follows a clear MVC-inspired pattern where:
-- **Model**: `HealthProfile` (data + business logic)
-- **Controller**: `Main` (user interaction + flow control)
-- **View**: Console output (managed by Main class)
-
-This separation ensures maintainable code where health logic is isolated from user interface concerns, making the system easy to extend and modify.
-
-
-### 🩺 **HealthProfile Class**
-Core class that manages pet health data with the following attributes:
-- `petName` (String): Name of the pet
-- `currentWeight` (double): Current weight in kilograms
-- `vaccinations` (List<String>): List of vaccinations received
-
-**Key Methods:**
-- `updateWeight(double newWeight)`: Updates and tracks weight changes
-- `addVaccination(String vaccine)`: Adds new vaccination records
-- `checkRisk()`: Analyzes weight and vaccination status for potential risks
-- `generateReport()`: Creates detailed health summary
-
-### 📋 **Menu System**
-Interactive console interface providing the following options:
-1. Add new pet profile
-2. Update pet weight
-3. Add vaccination record
-4. Check health risks
-5. Generate health report
-6. Exit system
+---
 
 ## 🧠 Object-Oriented Principles Implemented
 
-### 🔒 **Encapsulation**
-All attributes in the `HealthProfile` class are declared as `private` with controlled access through public getter and setter methods:
+### 🔒 Encapsulation
 
 ```java
 public class HealthProfile {
     private String petName;
     private double currentWeight;
     private List<String> vaccinations = new ArrayList<>();
-    
+
     public String getPetName() { return petName; }
     public double getCurrentWeight() { return currentWeight; }
     public void setCurrentWeight(double weight) { this.currentWeight = weight; }
 }
+```
 
-## 🎭 Abstraction
-The `HealthProfile` class provides a clear, high-level interface for managing pet health data without exposing internal implementation details. Methods like `checkRisk()` and `generateReport()` offer simplified interaction with complex health data.
+### 🎭 Abstraction
+
+Provides simplified methods such as:
+
+* `checkRisk()`
+* `generateReport()`
+  hiding internal logic complexity.
+
+---
+
+## 🛠️ Technical Design
+
+Uses an **MVC-inspired structure**:
+
+* **Model** → `HealthProfile`
+* **Controller** → `Main`
+* **View** → Console UI
+
+---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- **Java Development Kit (JDK) 8 or higher**
-- **Command-line interface (Terminal/CMD)**
 
-### Installation & Execution
+* **JDK 8 or higher**
+* **Terminal / Command Prompt**
 
-1. **Clone or download the project files**
-   ```bash
-   git clone [repository-url]
-   cd Pet-Health-Tracking-System
+### Installation
+
+```bash
+git clone [repository-url]
+cd Pet-Health-Tracking-System
+```
+
+---
+
+# 💻 Example Usage
+
+Below is an example of how the system behaves through the console.
+
+---
+
+## 🧮 Update Weight
+
+```
+===== MAIN MENU =====
+1. Create Pet Profile
+2. Update Weight
+3. Add Vaccination
+4. Check Health Risks
+5. Generate Health Report
+6. Exit
+
+Enter your choice (1-6): 2
+Enter new weight for Bella (kg): 24.5
+✓ Weight updated from 23.8 kg to 24.5 kg
+```
+
+---
+
+## 💊 Add Vaccination
+
+```
+===== MAIN MENU =====
+1. Create Pet Profile
+2. Update Weight
+3. Add Vaccination
+4. Check Health Risks
+5. Generate Health Report
+6. Exit
+
+Enter your choice (1-6): 3
+Enter vaccination name to add: Rabies 2025
+✓ Added vaccination: Rabies 2025
+```
+
+---
+
+## ⚠️ Check Health Risks
+
+```
+===== MAIN MENU =====
+1. Create Pet Profile
+2. Update Weight
+3. Add Vaccination
+4. Check Health Risks
+5. Generate Health Report
+6. Exit
+
+Enter your choice (1-6): 4
+Checking health risks for Bella...
+⚠ Warning: Overweight! (24.5 kg)
+```
+
+---
+
+## 📊 Generate Health Report
+
+```
+===== MAIN MENU =====
+1. Create Pet Profile
+2. Update Weight
+3. Add Vaccination
+4. Check Health Risks
+5. Generate Health Report
+6. Exit
+
+Enter your choice (1-6): 5
+========================================
+         Health Report for Bella
+========================================
+Name: Bella
+Weight: 24.5 kg
+Vaccinations:
+  - Rabies 2024
+  - Distemper
+  - Rabies 2025
+========================================
+```
+
+---
+
+## 👋 Exit Program
+
+```
+===== MAIN MENU =====
+1. Create Pet Profile
+2. Update Weight
+3. Add Vaccination
+4. Check Health Risks
+5. Generate Health Report
+6. Exit
+
+Enter your choice (1-6): 6
+Thank you for using Pet Health Tracker!
+Goodbye!
+```
+
+---
+
+# 🤝 Acknowledgment
+
+We sincerely thank our instructor for the guidance, support, and feedback throughout this project.
+We also appreciate our classmates and peers for their cooperation and encouragement.
+
+---
+
+# ⚠️ Disclaimer
+
+This project is for **educational use only**.
+It is not intended to replace real veterinary assessments.
+Always consult a licensed veterinarian for actual pet health concerns.
