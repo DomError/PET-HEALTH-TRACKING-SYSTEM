@@ -33,3 +33,17 @@ Automatically detect health concerns including underweight/overweight conditions
 Create comprehensive health summaries displaying weight, vaccination history, and risk alerts.
 
 ## 🏗️ Project Structure
+📦 Pet-Health-Tracking-System/
+├── 📂 src/                           # Source code directory
+│   ├── 📄 HealthProfile.java        # Main class with pet health logic
+│   │   ├── Attributes: petName, currentWeight, vaccinations
+│   │   ├── Methods: checkRisk(), generateReport(), addVaccination()
+│   │   └── Responsibility: Encapsulates all pet health data and business logic
+│   │
+│   └── 📄 Main.java                 # Console-based menu system
+│       ├── Menu with 6 options
+│       ├── Input validation and error handling
+│       └── Program flow and user interaction
+│
+├── 📄 README.md                     # Project documentation (this file)
+└── (Optional) 📄 .gitignore         # Git exclusion rules for compiled files
