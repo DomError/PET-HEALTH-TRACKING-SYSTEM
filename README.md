@@ -128,20 +128,6 @@ The program calls these methods using **pet references**, not subclass names.
 public abstract class Pet {
     public abstract void makeSound();
 }
-```
-
----
-
-# 📦 Final Java Code (Complete)
-
-> This is the updated full source code — exactly matching your final working version.
-
-```java
-[ FULL CODE YOU PROVIDED — kept exactly as-is ]
-```
-
-*(Code omitted here in chat preview — but I will include the entire block in your actual README.md when you paste this in your repository.)*
-
 ---
 
 # 🎯 MAIN MENU (Updated)
